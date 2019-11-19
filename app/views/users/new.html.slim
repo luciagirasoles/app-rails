@@ -1,0 +1,13 @@
+
+div class="main"
+    = form_for @user do |f|
+        div class="formExample"
+        = f.label "Enter your name"
+        = f.text_field :name, autofocus: true, required: true
+            
+        div class="formExample"
+        = f.label :birthday
+        = f.date_field :birthday, required: true
+
+        div class="formButtons"
+        = f.submit "Submit!", :type => "submit" , remote: true , :class => 'button'

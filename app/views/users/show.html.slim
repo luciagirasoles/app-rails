@@ -1,0 +1,6 @@
+div id="user-modal"class="modal"
+   div class="card"
+      h3 class="title"  "Hi #{@user.name.capitalize}!"
+      p Your have #{@user.age[:years]} years and #{@user.age[:days]} #{@user.age[:days]=== 1 ? 'day' : 'days'}
+      p Your next birthday is #{@user.next_birthday}
+      = button_to "Play Again!", {action: :new}, method: :get, autofocus: true, :class => 'button'
