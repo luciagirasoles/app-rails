@@ -1,9 +1,12 @@
 doctype html
 html
   head
-    title = full_title yield :title
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    = favicon_link_tag 'favicon.ico'
+    title AppRails
     = csrf_meta_tags
+    = csp_meta_tag  
+    = stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = yield
